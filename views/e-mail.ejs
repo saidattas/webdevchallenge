@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Email</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/email.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script type="text/javascript" src="js/mail.js"></script>
+</head>
+
+<body style="background-image: url('img/1.jpg');">
+<div class="container-fluid"> 
+  <div class="row ">
+    <div class="col-sm-2">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="logo">Email</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10"><br>
+       <div class="row" >
+        <div class="col-sm-1">
+          <a href="/email"><i class="bar  fas fa-arrow-left"></i></a>
+        </div>
+        <div class="col-sm-9">
+          <input class="bar" type="text" placeholder="Search mail" id="SearchBox" onkeyup="SearchMailFunction()">
+        </div>
+        <div class="col-sm-2">
+          <i class="fas fa-user-circle" data-toggle="dropdown"></i>
+            <div class="dropdown-menu">
+              <a class="dropdown-item"><i class="fas fa-user"></i> <script type="text/javascript">document.write(firstname +" "+lastname);</script></a>
+              <a class="dropdown-item"><i class="fas fa-envelope-open"></i> <script type="text/javascript">document.write(email + "<br>");
+</script></a>
+              <a class="dropdown-item" href="#"><i class="fas fa-wrench"></i> Settings</a>
+              <a class="dropdown-item" href="/email"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+      </div><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2" >
+      <center>
+        <div class="compose_btn" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-plus"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compose
+        </div>
+      </center><br>
+        <!-- The Modal -->
+              <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Compose</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <div class="box">
+                                <form><br>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                      <div class="input-box">
+                                        <input type="text" name="m_to" required autocomplete="off"/>
+                                        <label>To *</label>
+                                      </div>
+                                    </div>
+                                  </div><br><br>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                      <div class="input-box">
+                                        <input type="text" name="m_sub" autocomplete="off"/>
+                                        <label>Sub *</label>
+                                      </div>
+                                    </div>
+                                  </div><br><br>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                      <div class="input-box">
+                                        <textarea name="m_msg"  rows="4" autocomplete="off"></textarea>
+                                        <label>Message *</label>
+                                      </div>
+                                    </div>
+                                  </div><br><br>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                      <center><div class="next-button">
+                                          <button type="submit" name="submit" id="submit" value="submit" class="btn btn-primary">Next</button>
+                                      </div></center>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      <div class="row">
+          <div class="pils" href="#">
+            <i class="fas fa-inbox"></i>&nbsp;&nbsp;Inbox
+            <spam class="mCount">0</spam>
+          </div>
+      </div>
+      <div class="row">
+          <div class="pils" href="#">
+            <i class="fab fa-telegram-plane"></i>&nbsp;&nbsp;&nbsp;Sent
+            <spam class="mCount">0</spam>
+          </div>
+      </div>
+      <div class="row">
+          <div class="pils" href="#">
+            <i class="far fa-star"></i>&nbsp;&nbsp;Starred
+            <spam class="mCount">5</spam>
+          </div>
+      </div>
+      <div class="row">
+          <div class="pils" href="#">
+            <i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp;Drafts
+            <spam class="mCount">2</spam>
+          </div>
+      </div>
+      <div class="row">
+          <div class="pils" href="#">
+            <i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;Trash
+            <spam class="mCount">0</spam>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-10" id="demo">
+      <table id="MailList" class="mailList table table-hover">
+        
+        <tbody>
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>  
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;tksahoo@imails.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>  
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.com</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sid@gmail.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>  
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;aji@imaias.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>  
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+          </tr>  
+          <tr id="4">
+            <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;saidatta@gmais.com</td>
+              <td class="col-2">tffsjjnmcf</td>
+              <td class="col-3">Lorem ipsum dolor sit.</td>
+              <td class="col-4">2020-02-04 20:57:02</td>
+          </tr>  
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">gctuyuvhjb</td>
+            <td class="col-4">2020-02-04 20:57:02</td>
+            </tr> 
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem ipsum dolor sit.</td>
+                <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>  
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
+                <td class="col-2">tftyf</td>
+                <td class="col-3">gctuyuvhjb</td>
+                <td class="col-4">2020-02-04 20:57:02</td>
+            </tr> 
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sandu@gmail.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem ipsum dolor sit.</td>
+                <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;ritika@gmail.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem ipsum dolor sit.</td>
+                <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem ipsum dolor sit.</td>
+                <td class="col-4">2019-02-03 20:27:02</td>
+            </tr>
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem ipsum dolor sit.</td>
+                <td class="col-4">2010-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem ipsum dolor sit.</td>
+                <td class="col-4">2020-02-07 20:57:02</td>
+            </tr>
+            <tr id="4">
+              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soham@gmail.com</td>
+                <td class="col-2">ipsum</td>
+                <td class="col-3">Lorem, ipsum.</td>
+                <td class="col-4">2020-02-04 20:57:02</td>
+            </tr>
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
+            <td class="col-2">tftyf</td>
+            <td class="col-3">Lorem, ipsum dolor.</td>
+            <td class="col-4">2020-02-02 20:57:02</td>
+            </tr>  
+          <tr id="4">
+          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;abc@hjan.com</td>
+            <td class="col-2">asasf</td>
+            <td class="col-3">Lorem, ipsum.</td>
+            <td class="col-4">2020-01-04 20:57:02</td>
+            </tr>  
+          <tr id="4">
+             
+        </tbody>
+      </table>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>      
+</html>
