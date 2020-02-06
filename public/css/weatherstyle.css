@@ -24,7 +24,7 @@ body {
 }
 .main-content {
   flex-grow: 1;
-  margin: 0 20%;
+  margin: 0 10%;
 }
 h1{
   color: #dbbcbc;
@@ -70,21 +70,21 @@ h2 {
 
 button{
   background-color: rgb(228, 159, 95);
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 20px;
+  font-size: 15px;
   box-sizing: border-box;
   border-radius: 10px;
 }
 .weatherLocation input{
   border: 2px solid rgba(188, 194, 189, 0.972);
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
   margin: 10px 5px;
   box-sizing: border-box;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .widget .weatherIcon {
@@ -165,10 +165,9 @@ p a {
     background-color: #cccccc; 
     background-position: center;
     background-size:cover;
-    color:white;
   }
-  h1{width: 100%;
-    height: 100%;
+  h1{
+    text-align: center;
     color: #e6d5d5;
     display: flex;
     justify-content: center;
