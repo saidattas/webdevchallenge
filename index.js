@@ -51,7 +51,6 @@ app.get('/musicplayer', function(req, res) {
 	res.render('musicplayer');
 	// res.sendFile(path.join(__dirname + '/musicplayer.html'));
 });
-// app.listen(3000, () => {
-// 	console.log('SERVER IS RUNNING ON PORT 3000!');
-// });
-app.listen(process.env.PORT, process.env.IP);
+app.listen(3000, () => {
+	console.log('SERVER IS RUNNING ON PORT 3000!');
+});
