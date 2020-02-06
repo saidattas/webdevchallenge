@@ -8,6 +8,43 @@
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script type="text/javascript" src="js/mail.js"></script>
+  <style>
+    .box .input-box{
+            position: relative;
+        }
+        .box .input-box input,textarea,select{
+            width: 100%;
+            padding: 10px,0;    
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #09BCFF;
+        }
+        .box .input-box label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #909090;
+            padding: 10px,0;
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .box .input-box input:focus, textarea:focus{
+            border-bottom: 2px solid #09BCFF;
+        }
+
+        .box .input-box input:focus ~ label, .box .input-box textarea:focus ~ label,
+        .box .input-box input:valid ~ label, .box .input-box textarea:valid ~ label{
+            top: -18px;
+            left: 0;
+            color: #09BCFF;
+            font-size: 13px;
+        }
+           
+</style>
 </head>
 
 <body style="background-image: url('img/1.jpg');">
@@ -16,27 +53,29 @@
     <div class="col-sm-2">
       <div class="row">
         <div class="col-sm-12">
-          <h1 class="logo">Email</h1>
+          <h1 class="logo"><i class="fas fa-envelope"></i> WebEmail</h1>
         </div>
       </div>
     </div>
     <div class="col-sm-10"><br>
        <div class="row" >
         <div class="col-sm-1">
-          <a href="/email"><i class="bar  fas fa-arrow-left"></i></a>
+          <center>
+          <a href="/email"><i class="bar fas fa-arrow-left"></i></a></center>
         </div>
         <div class="col-sm-9">
           <input class="bar" type="text" placeholder="Search mail" id="SearchBox" onkeyup="SearchMailFunction()">
         </div>
         <div class="col-sm-2">
-          <i class="fas fa-user-circle" data-toggle="dropdown"></i>
+          <center>
+          <i class="user-icon fas fa-user-circle" data-toggle="dropdown"></i>
             <div class="dropdown-menu">
               <a class="dropdown-item"><i class="fas fa-user"></i> <script type="text/javascript">document.write(firstname +" "+lastname);</script></a>
               <a class="dropdown-item"><i class="fas fa-envelope-open"></i> <script type="text/javascript">document.write(email + "<br>");
 </script></a>
               <a class="dropdown-item" href="#"><i class="fas fa-wrench"></i> Settings</a>
               <a class="dropdown-item" href="/email"><i class="fas fa-sign-out-alt"></i> Logout</a>
-            </div>
+            </div></center>
         </div>
       </div><br>
     </div>
@@ -130,127 +169,113 @@
       </div>
     </div>
     <div class="col-sm-10" id="demo">
-      <table id="MailList" class="mailList table table-hover">
+      <div class="container">
+        <div class="table-responsive">
+          <table id="MailList" class="mailList table table-hover">
         
         <tbody>
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr>  
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;tksahoo@imails.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr>  
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr>
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.com</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr>
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sid@gmail.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr>  
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;aji@imaias.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr>  
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-          </tr>  
-          <tr id="4">
-            <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;saidatta@gmais.com</td>
-              <td class="col-2">tffsjjnmcf</td>
-              <td class="col-3">Lorem ipsum dolor sit.</td>
-              <td class="col-4">2020-02-04 20:57:02</td>
-          </tr>  
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">gctuyuvhjb</td>
-            <td class="col-4">2020-02-04 20:57:02</td>
-            </tr> 
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem ipsum dolor sit.</td>
-                <td class="col-4">2020-02-04 20:57:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>  
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
-                <td class="col-2">tftyf</td>
-                <td class="col-3">gctuyuvhjb</td>
-                <td class="col-4">2020-02-04 20:57:02</td>
-            </tr> 
-            <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sandu@gmail.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem ipsum dolor sit.</td>
-                <td class="col-4">2020-02-04 20:57:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;ritika@gmail.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem ipsum dolor sit.</td>
-                <td class="col-4">2020-02-04 20:57:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem ipsum dolor sit.</td>
-                <td class="col-4">2019-02-03 20:27:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem ipsum dolor sit.</td>
-                <td class="col-4">2010-02-04 20:57:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;sai@gmais.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem ipsum dolor sit.</td>
-                <td class="col-4">2020-02-07 20:57:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>
             <tr id="4">
-              <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soham@gmail.com</td>
-                <td class="col-2">ipsum</td>
-                <td class="col-3">Lorem, ipsum.</td>
-                <td class="col-4">2020-02-04 20:57:02</td>
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
             </tr>
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;soumya@imails.tk</td>
-            <td class="col-2">tftyf</td>
-            <td class="col-3">Lorem, ipsum dolor.</td>
-            <td class="col-4">2020-02-02 20:57:02</td>
-            </tr>  
-          <tr id="4">
-          <td class="col-1"><i class="far fa-star"></i>&nbsp;&nbsp;abc@hjan.com</td>
-            <td class="col-2">asasf</td>
-            <td class="col-3">Lorem, ipsum.</td>
-            <td class="col-4">2020-01-04 20:57:02</td>
-            </tr>  
-          <tr id="4">
-             
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;swas1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+            <tr id="4">
+            <td class="bold"><i class="far fa-star"></i>&nbsp;&nbsp;soumya1820@gmail.com</td>
+            <td>tftyf</td>
+            <td>gctuyuvhjb</td>
+            <td>2020-02-04 20:57:02</td>
+            </tr>
+          
         </tbody>
       </table>
+    </div>
+  </div>
+    
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

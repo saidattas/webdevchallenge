@@ -1,64 +1,20 @@
-/* Other ............ */
-      body{
-          background-image: url("../img/9.jpg") ;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: cover;
-          background-attachment: fixed;
-          background-attachment: fixed;
-          padding: 0;
-          margin: 0;
-          font-family: sans-serif;
-        }
-        .logo{
-          color: #fff;
-          text-align: center;
-          padding: 18px;
-        }
-.r{
-  color: red;
-}
-.g{
-  color: green;
-}
-.box .input-box{
-  position: relative;
-}
-.box .input-box input,textarea,select{
-  width: 100%;
-  padding: 10px,0;    
-  font-size: 16px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #09BCFF;
-}
-.box .input-box label{
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #909090;
-  padding: 10px,0;
-  font-size: 16px;
-  pointer-events: none;
-  transition: .5s;
-}
+body{
+    background-image: url("../img/9.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    }
+.logo{
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    font-size: 24px;
+    }
 
-.box .input-box input:focus, textarea:focus{
-  border-bottom: 2px solid #09BCFF;
-}
-
-.box .input-box input:focus ~ label, .box .input-box textarea:focus ~ label,
-.box .input-box input:valid ~ label, .box .input-box textarea:valid ~ label{
-  top: -18px;
-  left: 0;
-  color: #09BCFF;
-  font-size: 13px;
-}       
-
-/* Other complete ............ */
-
-/*  compose button ......................*/
 
 .compose_btn{
   padding: 15px 10px;
@@ -71,10 +27,8 @@
 .compose_btn:hover{
     background: rgba(255, 255, 255, 0.8);
 }
-/*  compose button complete ......................*/
 
 
-/* back button  ..............*/
       .fa-ellipsis-h,.fa-arrow-left, .fa-user-circle{
         color: #fff;
         font-size: 20px;
@@ -84,6 +38,7 @@
       .fa-user-circle{
         font-size: 40px;
         padding: 0;
+        padding-top: 5px;
         padding-right: 20PX;
       }
       .fa-ellipsis-h:hover,.fa-arrow-left:hover{
@@ -91,10 +46,7 @@
         height: 40px;
         width: 40px;
       }
-/* back button complete ................*/
 
-
-/* search box .......................... */
       #SearchBox{
         background: rgba(255, 255, 255, 0.5);
         outline: none;
@@ -110,10 +62,8 @@
         background: rgba(255, 255, 255, 0.9);
         color: #000;
       }
-/* search box complete .......................... */
 
 
-/* Mail table .......................... */
       table {
         opacity: 0.8; 
         background-color: #fff;
@@ -125,22 +75,11 @@
       td{
         background-color: #fff;
       }
-      .col-1{
-        width: 40%;
+      .bold{
         font-weight: bold;
-        padding-left: 10px;
       }
-      .col-2{
-        width: 20%;
-      }
-      .col-3{
-        width: 20%;
-      }
-      .col-4{
-        width: 10%;
-      }
+      
 
-/* Mail table complete .......................... */
 .pils{
   background: transparent;
   padding: 10px 20px 10px 40px;
@@ -165,4 +104,6 @@ table .fa-star{
 table .fa-star:hover{
   color: #3498DB;
 }
+
+
 
