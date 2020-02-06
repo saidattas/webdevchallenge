@@ -6,7 +6,6 @@ const weatherData = require('./utils/weatherData');
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
@@ -24,7 +23,6 @@ app.get('/weather', function(req, res) {
 			error: 'You must enter address in search text box'
 		});
 	}
-
 	weatherData(address, (error, { temperature, description, cityName } = {}) => {
 		if (error) {
 			return res.send({
@@ -38,7 +36,6 @@ app.get('/weather', function(req, res) {
 			cityName
 		});
 	});
-	// res.render('weather');
 });
 
 app.get('/email', function(req, res) {
@@ -49,8 +46,7 @@ app.get('/e-mail', function(req, res) {
 });
 app.get('/musicplayer', function(req, res) {
 	res.render('musicplayer');
-	// res.sendFile(path.join(__dirname + '/musicplayer.html'));
 });
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log('SERVER IS RUNNING ON PORT 3000!');
 });

@@ -3,4 +3,5 @@
 
 ```npm intall```to initialize
 
-```npm run server``` to start server at localhost:5050
+```npm run server``` to start server at localhost:3000
+
